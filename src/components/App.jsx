@@ -102,7 +102,7 @@ export class App extends Component {
         <Searchbar handleSubmit={handleSubmit} />
         {error && <div>{error}</div>}
         {isLoading && <Loader />}
-        <Toaster position="top-right" reverseOrder={false} />;
+        <Toaster position="top-right" reverseOrder={false} />
         <Gallery>
           <GalleryItem items={images} toggleModal={toggleModal} />
         </Gallery>
