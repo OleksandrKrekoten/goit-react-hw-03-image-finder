@@ -1,5 +1,5 @@
 import { ImageGalleryItem, Image } from './ImageGalleryItem.styled';
-
+import PropTypes from 'prop-types'; 
 export const GalleryItem = ({ items, toggleModal }) => {
   return items.map(el => {
     return (
@@ -15,3 +15,7 @@ export const GalleryItem = ({ items, toggleModal }) => {
   });
 };
 
+GalleryItem.propTypes = {
+  items: PropTypes.array.isRequired,
+  toggleModal : PropTypes.func.isRequired
+};

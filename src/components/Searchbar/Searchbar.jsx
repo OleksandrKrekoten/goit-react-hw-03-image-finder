@@ -1,5 +1,6 @@
 import { Header, Form, SearchButton, SearchInput } from './Searchbar.styled';
 import { ImSearch } from 'react-icons/im';
+import PropTypes from 'prop-types'; 
 
 export const Searchbar = ({ handleSubmit }) => {
   return (
@@ -19,4 +20,7 @@ export const Searchbar = ({ handleSubmit }) => {
       </Form>
     </Header>
   );
+};
+Searchbar.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
 };
