@@ -42,6 +42,10 @@ export class App extends Component {
         this.setState(prevState => {
           return { images: [...prevState.images, ...response.data.hits] };
         });
+        if (response.data.totalHits === 0) {
+          console.log('oops');
+          toast.error('Nothing found.');
+        } 
         if (response.data.hits.length < 12) {
           this.setState({ showLoadMoreButton: false });
         } else {
